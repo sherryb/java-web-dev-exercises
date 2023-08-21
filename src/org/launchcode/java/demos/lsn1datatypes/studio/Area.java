@@ -7,9 +7,12 @@ public class Area {
 
         System.out.println("Enter a radius: ");
         double radius = input.nextDouble();
+        input.close();
 
         double area = Circle.getArea(radius);
         System.out.println("Area of " + area + " with radius of " + radius);
+
+
 
     }
 }
