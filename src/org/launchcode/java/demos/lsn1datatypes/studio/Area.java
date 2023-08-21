@@ -6,9 +6,9 @@ public class Area {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter a radius: ");
-        Double radius = input.nextDouble();
+        double radius = input.nextDouble();
 
-        Double area = Circle.getArea(radius);
+        double area = Circle.getArea(radius);
         System.out.println("Area of " + area + " with radius of " + radius);
 
     }
