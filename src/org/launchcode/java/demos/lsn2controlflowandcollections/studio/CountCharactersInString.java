@@ -1,7 +1,5 @@
 package org.launchcode.java.demos.lsn2controlflowandcollections.studio;
 import java.util.HashMap;
-import java.util.Arrays;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CountCharactersInString {
