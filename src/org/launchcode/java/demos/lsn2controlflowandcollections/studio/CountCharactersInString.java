@@ -12,17 +12,19 @@ public class CountCharactersInString {
         String userInput = input.nextLine();
         String lowerCaseInput = userInput.toLowerCase();
         char[] charifiedInput = lowerCaseInput.toCharArray();
+        String specialCharacters = "!@#$%^&*()-_+={}[];:<>,./?";
         HashMap<Character, Integer> characterCounts = new HashMap<Character, Integer>();
         input.close();
 
-        for(char character : charifiedInput) {
-            if(characterCounts.containsKey(character)) {
-                characterCounts.put(character, characterCounts.get(character) + 1);
-            } else {
-                characterCounts.put(character, 1);
+        for(Character character : charifiedInput) {
+            if(!specialCharacters.contains(character.toString())) {
+                if(characterCounts.containsKey(character)) {
+                    characterCounts.put(character, characterCounts.get(character) + 1);
+                } else {
+                    characterCounts.put(character, 1);
+                }
             }
         }
-
         System.out.println(characterCounts);
     }
 }
