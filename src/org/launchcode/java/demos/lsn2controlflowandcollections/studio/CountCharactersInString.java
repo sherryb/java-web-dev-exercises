@@ -2,14 +2,20 @@ package org.launchcode.java.demos.lsn2controlflowandcollections.studio;
 import java.util.HashMap;
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Scanner;
+
 public class CountCharactersInString {
     public static void main(String[] args) {
 
-        String userInput = "If the product of two terms is zero then common sense says at least one of the two terms has to be zero to start with. So if you move all the terms over to one side, you can put the quadratics into a form that can be factored allowing that side of the equation to equal zero. Once you’ve done that, it’s pretty straightforward from there.";
-        char[] stringifiedInput = userInput.toCharArray();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a string to count the characters: ");
+        String userInput = input.nextLine();
+        String lowerCaseInput = userInput.toLowerCase();
+        char[] charifiedInput = lowerCaseInput.toCharArray();
         HashMap<Character, Integer> characterCounts = new HashMap<Character, Integer>();
+        input.close();
 
-        for(char character : stringifiedInput) {
+        for(char character : charifiedInput) {
             if(characterCounts.containsKey(character)) {
                 characterCounts.put(character, characterCounts.get(character) + 1);
             } else {
@@ -18,7 +24,5 @@ public class CountCharactersInString {
         }
 
         System.out.println(characterCounts);
-
-
     }
 }
